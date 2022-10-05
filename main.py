@@ -50,7 +50,7 @@ def on_forever():
     t1_min = t1 % 60
     t1_str = "" + str(t1_hr) + "hr" + ("" + str(t1_min)) + "min"
     OLED12864_I2C.show_string(0, 2, "With Heater:", 1)
-    OLED12864_I2C.show_string(1, 3, "" + str(x_heater), 1)
+    OLED12864_I2C.show_string(1, 3, t1_str, 1)
     basic.pause(5000)
     OLED12864_I2C.clear()
 basic.forever(on_forever)

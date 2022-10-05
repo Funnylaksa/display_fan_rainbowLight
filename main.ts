@@ -43,7 +43,7 @@ basic.forever(function on_forever() {
     let t1_min = t1 % 60
     let t1_str = "" + ("" + t1_hr) + "hr" + ("" + ("" + t1_min)) + "min"
     OLED12864_I2C.showString(0, 2, "With Heater:", 1)
-    OLED12864_I2C.showString(1, 3, "" + ("" + x_heater), 1)
+    OLED12864_I2C.showString(1, 3, t1_str, 1)
     basic.pause(5000)
     OLED12864_I2C.clear()
 })
