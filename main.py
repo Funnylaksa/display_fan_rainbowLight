@@ -40,7 +40,7 @@ def on_forever():
     t0 = w_moist * x_moist + w_weight * x_weight + w_temp * x_temp + w_humid * x_humid + w_wind * x_wind
     t0_hr = Math.idiv(t0, 60)
     t0_min = t0 % 60
-    t0_str = "" + str(t0_hr) + "hr" + ("" + str(t0_min)) + "min"
+    t0_str = "" + str(t0_hr) + "hr " + str(t0_min) + "min"
     OLED12864_I2C.show_string(1, 1, t0_str, 1)
     basic.pause(1000)
 
@@ -48,7 +48,7 @@ def on_forever():
     t1 = t0 + w_heater * x_heater
     t1_hr = Math.idiv(t1, 60)
     t1_min = t1 % 60
-    t1_str = "" + str(t1_hr) + "hr" + ("" + str(t1_min)) + "min"
+    t1_str = "" + str(t1_hr) + "hr " + str(t1_min) + "min"
     OLED12864_I2C.show_string(0, 2, "With Heater:", 1)
     OLED12864_I2C.show_string(1, 3, t1_str, 1)
     basic.pause(5000)
