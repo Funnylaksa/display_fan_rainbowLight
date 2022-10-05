@@ -29,6 +29,7 @@ radio.setGroup(88)
 radio.setGroup(90)
 OLED12864_I2C.init(60)
 basic.forever(function on_forever() {
+    //  without heater 
     OLED12864_I2C.showString(0, 0, "Est Dry Time:", 1)
     let t0 = w_moist * x_moist + w_weight * x_weight + w_temp * x_temp + w_humid * x_humid + w_wind * x_wind
     let t0_hr = Math.idiv(t0, 60)

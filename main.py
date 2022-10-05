@@ -35,6 +35,7 @@ radio.set_group(90)
 OLED12864_I2C.init(60)
 
 def on_forever():
+    # without heater 
     OLED12864_I2C.show_string(0, 0, "Est Dry Time:", 1)
     t0 = w_moist * x_moist + w_weight * x_weight + w_temp * x_temp + w_humid * x_humid + w_wind * x_wind
     t0_hr = Math.idiv(t0, 60)
@@ -42,6 +43,7 @@ def on_forever():
     t0_str = "" + str(t0_hr) + "hr" + ("" + str(t0_min)) + "min"
     OLED12864_I2C.show_string(1, 1, t0_str, 1)
     basic.pause(1000)
+
     # with heater
     t1 = t0 + w_heater * x_heater
     t1_hr = Math.idiv(t1, 60)
