@@ -1,5 +1,5 @@
 {
-    "name": "display",
+    "name": "combined",
     "description": "",
     "dependencies": {
         "core": "*",
@@ -7,12 +7,14 @@
         "microphone": "*",
         "pxt-kitronik-128x64display": "github:kitronikltd/pxt-kitronik-128x64display#v0.4.0",
         "OLED12864_I2C": "github:makecode-extensions/oled12864_i2c#v1.5.0",
-        "colorbit": "github:51bit/colorbit#v0.1.3"
+        "colorbit": "github:51bit/colorbit#v0.1.3",
+        "kittenwifi": "github:kittenbot/pxt-kittenwifi#v0.2.7"
     },
     "files": [
         "main.blocks",
         "main.ts",
-        "README.md"
+        "README.md",
+        "main.py"
     ],
     "testFiles": [
         "test.ts"
